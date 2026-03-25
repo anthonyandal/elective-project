@@ -1,0 +1,861 @@
+.home{
+    position: absolute;
+    top:90px;
+margin-left: -223px;
+    width: 1400px;
+    height: 550px;
+    margin-right:-20px;
+
+}
+.top{
+    position: absolute;
+    left:30px;
+  
+}
+h1{
+    position: absolute;
+ margin-top: 0.40%;
+ left:3px;
+    letter-spacing: 9px;
+    left:30px;
+   font-size: 45px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+   
+}
+
+h2{
+    margin-top: 19px;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-left:175px;
+    -webkit-text-stroke: 1px #838080;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#search{
+
+}
+.navbar ul{
+    position: absolute;
+  top:42px;
+
+    left:20px;
+	list-style-type:none;
+   
+	overflow:hidden;
+
+
+	
+}
+.navbar a{
+    
+	text-decoration:none;
+	
+	text-align: center;
+	display: block;
+	font-size: 15px;
+	padding: 15px; 
+    color: rgb(56, 55, 55);
+   
+    
+   
+}
+.navbar a:hover{
+	color:rgb(111, 111, 111);
+    transition:0.2s;
+}
+.navbar a.pointed{
+	
+}
+.navbar li{
+	float:right;
+    margin-left: 4px;
+}
+
+.fa-solid.fa-sort-down.fa-sm{
+    position: absolute;
+   top:20px;
+   left:44px;
+ }
+ .fa-solid.fa-sort-down.fa-sm:hover{
+    color:hsl(0, 61%, 33%);
+    
+ 
+}
+
+ .dropdown{
+    display:hidden;
+position:absolute;
+left:1224px;
+top:60px;
+background-color:white;
+box-shadow:1px 1px 2px 1px rgb(175, 175, 175);
+font-size: 15px;
+width:157px;
+height: 175px;
+z-index: 30;
+
+ }
+.icons .fa-solid.fa-cart-shopping.fa-lg:hover{
+    color:rgb(212, 214, 210);
+ }
+ .icons .fa-regular.fa-user.fa-lg:hover{
+    height:100px;
+ }
+
+
+ .dropdown .accUser a:hover{
+color:black;
+ }
+ .dropdown a:hover{
+    color:rgb(125, 124, 124);
+ }
+
+ 
+.dropdown .accUser a{
+    color: rgb(87, 87, 87);
+    position: relative;
+
+
+    
+}
+.dropdown .accUser{
+    color: rgb(53, 53, 53);
+    position: relative;
+    top:-13px;
+}
+ .dropdown ul{
+    width: 150px;
+    padding: 8px;
+    text-align: left;
+    list-style-type:none;
+    margin-bottom: 30px;
+   
+    
+ }
+ .dropdown a{
+    position: relative;
+   text-decoration: none;
+   color: rgb(183, 183, 183) ;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   padding:12px 1px 15px 2px;
+   font-weight: normal;
+   margin-left: 3px;
+ }
+ .dropdown .classNav{
+    margin-bottom: 7px;
+    margin-top: 2px;
+
+ }
+.dot{
+    position: absolute;
+    top:76px;
+    left:1458px;
+    height:8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: rgb(145, 145, 145);
+}
+.navshad{
+    position: absolute;
+    top:60px;
+    left:1425px;
+    height: 30px;
+    width: 1px;
+    font-weight: bolder;
+   box-shadow:   5px 5px gray;
+    background-color: rgb(255, 255, 255);
+    
+}
+.Slayer img{
+    position: absolute;
+    top:90px;
+    height: 650px;
+    width:500px;
+    left:1000px;
+    z-index: -3;
+}
+.Slay img{
+    position: absolute;
+    top:90px;
+height:650px;
+width:1100px;
+z-index: -3;
+}
+.SlayerLog img{
+    position: absolute;
+    top:90px;
+    height: 650px;
+    width:500px;
+    left:1000px;
+   
+}
+.SlayLog img{
+    position: absolute;
+    top:90px;
+height:650px;
+z-index:1;
+width:1100px;
+}
+#promote{
+    background-color: rgb(226, 111, 111);
+    position: absolute;
+    width: 1400px;
+    height:50px;
+    top:100px;
+    margin-left: 23px;
+
+    
+}
+
+.prom1 a{
+    position: absolute;
+    top: 80px;
+	text-decoration:none;
+	text-align: center;
+	display: block;
+	font-size: 40px;
+	padding: 15px; 
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    float: right;
+    left:340px;
+}
+.prom2 a{
+    position: absolute;
+    top: 80px;
+	text-decoration:none;
+	text-align: center;
+	display: block;
+	font-size: 40px;
+	padding: 15px; 
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    float: right;
+    left:590px;
+}
+.prom3 a{
+    position: absolute;
+    top: 80px;
+	text-decoration:none;
+	text-align: center;
+	display: block;
+	font-size: 40px;
+	padding: 15px; 
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    float: right;
+    left:940px;
+}
+
+.promote a:hover{
+	text-decoration:underline;
+}
+
+
+#slider{
+    overflow: hidden;
+
+    position: absolute;
+    top:140px;
+margin-left: 23px;
+width: 1400px;
+height: 1650px;
+    margin-right:-20px;
+    z-index: -1;
+
+
+}
+
+#slider figure{
+position: relative;
+width:900%;
+left:0%;
+margin:0%;
+right:0%;
+animation:20s slider infinite;
+}
+#slider figure img{
+float:left;
+width: 20%;
+width: 1400px;
+height: 550px;
+
+
+
+}
+@keyframes slider{
+    0%{
+        left:0;
+    }
+    20%{
+        left:0;
+    }
+    25%{
+        left:-100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left: -400%;
+    }
+   
+  
+    
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 60px;
+	left: 12px;
+	transform: translateX(-50%);
+	z-index: 1px;
+    top:500px;
+}
+
+.slider-nav a {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+.shopna p{
+    position: absolute;
+    top:670px;
+    left:600px;
+    font-size: 30px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    z-index: 1;
+}
+.categs{
+    position: absolute;
+    margin-top: 710px;
+    left:60px;
+    z-index: -1;
+}
+.cats{
+    display: inline-block;
+      
+    border: 3px solid #e7e7e7;
+ 
+    margin-top: 10px;
+    margin-left: 20px;	
+    
+}
+.cats img{
+   
+    width:160px;
+    height:180px;
+  
+}
+.cats:hover{
+    box-shadow: 0px 0px 1px 1px rgb(180, 179, 179);
+    transition: 0.4s;
+    width:165px;
+    height:185px;
+
+}
+
+.icons ul{
+    position: absolute;
+    left:1200px;
+  z-index: -1;
+      list-style-type:none;
+   
+      overflow:hidden;
+}
+.icons li{
+ margin-top: -8px;
+	float:right;
+    margin-left: -90px;
+   
+}
+.icons a{
+    
+	text-decoration:none;
+	margin-left: 84px;
+	text-align: center;
+	display: block;
+	font-size: 20px;
+	padding: 15px; 
+    color: rgb(131, 128, 128);
+    font-weight: bolder;
+
+  
+}
+
+.navbarA ul{
+    position: absolute;
+    left:1390px;
+  
+      list-style-type:none;
+     
+      overflow:hidden;
+}
+.navbarA li{
+ margin-top: 28px;
+	float:right;
+    margin-left: -6px;
+}
+.navbarA a{
+    
+	text-decoration:none;
+	
+	text-align: center;
+	display: block;
+	font-size: 20px;
+	padding: 15px; 
+    color: rgb(131, 128, 128);
+    font-weight: bolder;
+    
+   
+}
+.navbarA a:hover{
+	color:rgb(193, 190, 190)
+}
+.navbarA a.pointed{
+	color: rgb(32, 32, 32);
+}
+.search button{
+position: absolute;
+left:1200px;
+top:25px;
+background-color: black;
+height:30px;
+}
+.search input{
+    position: absolute;
+    top:25px;
+    height:26px;
+    left:1033px;
+    border: 1px  solid #c0c0c0;;
+}
+
+
+.dark-bg{
+    position:absolute;
+	background-color:black ;
+	left:0;
+	height:8000px;
+	width:1080;
+	top:1px;
+	right:0;
+	bottom:0;
+	z-index:10px;
+	opacity: 0.88;
+}
+.dark-bg.circle{
+    background-color: black;
+width:70px;
+height:170px;
+z-index: 20;
+border-radius: 40%;
+position: absolute;
+top:25px;
+left:1090px;
+}
+.close{
+    color:white;
+    position:absolute;
+    top:19px;
+    left:1071px;
+text-decoration: none;
+font-size: 40px;
+background-color: black;
+width:70px;
+height:70px;
+z-index: 10;
+border-radius: 40%;
+
+}
+.denim2pic{
+    position:absolute;
+    top:32px;
+    left:470px;
+    width:590px;
+    height:670px;
+    margin-right: 380px;
+    z-index: 3;
+  }
+  .LogIn{
+    position:absolute;
+    text-align:center;
+    top:160px;
+    left:900px;
+    height:550px;
+    width:390px;
+    border: 1px solid rgb(158, 157, 157);
+    border-radius:5%;
+   
+    background-color:white;
+}
+.LabelCSS{
+   
+    font-size:18px;
+   
+  left:20px;
+    position:absolute;
+    top:130px;
+}
+.Label2CSS{
+  
+    font-size:19px;
+   left:70px;
+    position:absolute;
+  top:185px;
+}
+.LogIn input{
+    position:absolute;
+    height:40px;
+    border: 1px solid rgb(137, 137, 137);
+    width:300px;
+    left:40px;
+    top:110px;
+    font-size:15px;
+       
+}
+.LogIn .Input::placeholder{
+    color: rgb(188, 188, 188);
+  
+}
+.LogIn .pReg .empaLogsi a{
+    color: #000000;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.sintax button{
+    background-color: #000000;
+}
+.sintax{
+    position:absolute;
+    top:20px;
+    height:50px;
+    width:305px;
+    
+    
+    text-decoration: none;
+    
+}
+.nextSign{
+    position:absolute;
+    top:150px;  
+    height:50px;
+    width:305px;
+    margin-left:-110px;
+}
+.nextSign button{
+   background-color: #000000;
+    font-size: 18px;
+    color: white;
+}
+.LoginNa a{
+   position: absolute;
+   top:627px;
+   left:1148px;
+   text-decoration: none;
+   color: #000000;
+   font-weight: bold;
+}
+.pReg p{
+text-decoration: none;
+color: rgb(71, 71, 71);
+font-weight: lighter;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.pReg a{ 
+    
+   color: #000000;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+
+
+}
+.pReg {
+    position:absolute;
+    top:450px;
+    left:115px;
+}
+.pF{
+    position:absolute;
+    top:220px;
+    left:178px;
+    font-size: 20px;
+    color: gray;
+}
+.fbPic{
+position:absolute;
+top:480px;
+left:200px;
+}
+.gmailPic{
+    position:absolute;
+    top:480px;
+    left:320px;
+    height:55px;
+    width:50px;
+}
+.FP{
+    position:absolute;
+    top:250px;
+    left:230px;
+}
+.signUpLog{
+    text-align:left;
+    margin-left: 38px;
+    font-size: 30px;
+   margin-top: 34px;
+    
+}
+.orLine img{
+position: absolute;
+top:220px;
+width:110px;
+z-index: 1;
+left: 60px;
+
+}
+.orLine2 img{
+    position: absolute;
+    top:220px;
+    width:110px;
+    z-index: 4;
+    left: 210px;
+    }
+
+    .test1 img{
+height:40px;
+width:150px;
+margin-top: -200px;
+border: 2px solid  rgb(190, 188, 188);
+}
+.test2 img{
+    margin-left: -290px;
+    height:40px;
+    width:150px;
+    margin-top: -200px;
+    border: 2px solid rgb(190, 188, 188);
+    }
+    .signUpTalaga{
+        position: absolute;
+        top:507px;
+        left:1000px;
+    }
+    .SignCook{
+        position: absolute;
+        top:527px;
+        left:940px;
+        font-weight: bolder;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .SignCook a{
+        text-decoration: none;
+        font-size: 14px;
+        color: #000000;
+        
+    }
+    .SignCook2{
+        position: absolute;
+        top:527px;
+        left:1120px;
+        font-weight: bolder;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .SignCook2 a{
+        text-decoration: none;
+        font-size: 14px;
+        color: #000000;
+        
+    }
+    .and{
+        position: absolute;
+        top:527px;
+        left:1100px;
+    }
+
+    .PhUmailLogLog input{
+        position:absolute;
+        height:40px;
+        border: 1px solid rgb(137, 137, 137);
+        width:300px;
+        left:40px;
+       
+        font-size:15px;
+        z-index: 2;
+        top:220px;
+        left:940px;
+        
+    }
+
+    .LogInLog{
+        position:absolute;
+        text-align:center;
+        top:160px;
+        left:900px;
+        height:550px;
+        width:390px;
+        border: 1px solid rgb(158, 157, 157);
+        border-radius:5%;
+       
+        background-color:white;
+    }
+
+    .LogInLog input{
+        position:absolute;
+        height:40px;
+        border: 1px solid rgb(137, 137, 137);
+        width:300px;
+        left:40px;
+        top:110px;
+        font-size:15px;
+           
+    }
+    .LogInLog .Input::placeholder{
+        color: rgb(188, 188, 188);
+        
+      
+    }
+
+    .PhUmailLogLog .Input2::placeholder{
+        color: rgb(188, 188, 188);
+        
+      
+    }
+    .LogInLog .pReg .empaLogsi a{
+        color: #000000;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    
+    .sintaxLog button{
+        background-color: #000000;
+    }
+    .sintaxLog{
+        position:absolute;
+        top:20px;
+        height:50px;
+        width:305px;
+        
+        
+        text-decoration: none;
+        
+    }
+    .nextSignLog{
+        position:absolute;
+        top:150px;  
+        height:50px;
+        width:305px;
+        margin-left:-110px;
+    }
+    .nextSignLog button{
+       background-color: #000000;
+        font-size: 18px;
+        color: white;
+    }
+    .LoginNaLog a{
+       position: absolute;
+       top:627px;
+       left:1148px;
+       text-decoration: none;
+       color: #000000;
+       font-weight: bold;
+    }
+    .pRegLog p{
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+    font-weight: lighter;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    .pRegLog a{ 
+        
+       
+      
+        color: #000000;
+        text-decoration: none;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bolder;
+    
+    
+    }
+    .pRegLog {
+        position:absolute;
+        top:380px;
+        left:115px;
+    }
+    .pFLog{
+        position:absolute;
+        top:210px;
+        left:178px;
+        font-size: 20px;
+        color: gray;
+    }
+    .orLineLog img{
+        position: absolute;
+        top:210px;
+        width:110px;
+        z-index: 1;
+        left: 60px;
+        
+        }
+        .orLine2Log img{
+            position: absolute;
+            top:210px;
+            width:110px;
+            z-index: 4;
+            left: 210px;
+            }
+            .test1Log img{
+                height:40px;
+                width:150px;
+                margin-top: -200px;
+                border: 2px solid  rgb(190, 188, 188);
+                }
+                .test2Log img{
+                    margin-left: -290px;
+                    height:40px;
+                    width:150px;
+                    margin-top: -200px;
+                    border: 2px solid rgb(190, 188, 188);
+
+                    }
+                    .LoginNaLog a{
+                        position: absolute;
+                        top:557px;
+                        left:1113px;
+                        text-decoration: none;
+                        color: #000000;
+                        font-weight: bold;
+                     }
+                     .signUpLogLog{
+                        text-align:left;
+                        margin-left: 38px;
+                        font-size: 30px;
+                       margin-top: 14px;
+
+                    }

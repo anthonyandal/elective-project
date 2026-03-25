@@ -1,0 +1,10 @@
+All the BEST for a whole lot LESS
+
+TODO
+Add profile on header more/add ons pa too plain
+footer of the website
+create shopee log/in sign up page
+fix hover/animations
+add deals you like then products inside bordefr
+flashdeal
+-floatingg new user/campaign when user loads the website
