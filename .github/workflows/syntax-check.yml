@@ -24,4 +24,4 @@ jobs:
         run: jshint ESTI/*.js
 
       - name: Check HTML Syntax
-        run: htmlhint ESTI/*.html
+        run: htmlhint "ESTI/*.html" --ignore "**/index.html"

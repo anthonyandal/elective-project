@@ -33,9 +33,6 @@ h2{
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#search{
-
-}
 .navbar ul{
     position: absolute;
   top:42px;
@@ -65,9 +62,6 @@ h2{
 	color:rgb(111, 111, 111);
     transition:0.2s;
 }
-.navbar a.pointed{
-	
-}
 .navbar li{
 	float:right;
     margin-left: 4px;
@@ -85,7 +79,7 @@ h2{
 }
 
  .dropdown{
-    display:hidden;
+    display: none;
 position:absolute;
 left:1224px;
 top:60px;
@@ -511,7 +505,7 @@ border-radius: 40%;
     width:390px;
     border: 1px solid rgb(158, 157, 157);
     border-radius:5%;
-   
+    z-index: 10;
     background-color:white;
 }
 .LabelCSS{
@@ -537,7 +531,7 @@ border-radius: 40%;
     left:40px;
     top:110px;
     font-size:15px;
-       
+    z-index: 10;
 }
 .LogIn .Input::placeholder{
     color: rgb(188, 188, 188);
@@ -557,8 +551,7 @@ border-radius: 40%;
     top:20px;
     height:50px;
     width:305px;
-    
-    
+    z-index: 10;
     text-decoration: none;
     
 }
@@ -568,6 +561,7 @@ border-radius: 40%;
     height:50px;
     width:305px;
     margin-left:-110px;
+    z-index: 10;
 }
 .nextSign button{
    background-color: #000000;
@@ -707,7 +701,7 @@ border: 2px solid  rgb(190, 188, 188);
         left:40px;
        
         font-size:15px;
-        z-index: 2;
+        z-index: 10;
         top:220px;
         left:940px;
         
@@ -722,7 +716,7 @@ border: 2px solid  rgb(190, 188, 188);
         width:390px;
         border: 1px solid rgb(158, 157, 157);
         border-radius:5%;
-       
+        z-index: 10;
         background-color:white;
     }
 
@@ -734,7 +728,7 @@ border: 2px solid  rgb(190, 188, 188);
         left:40px;
         top:110px;
         font-size:15px;
-           
+        z-index: 10;
     }
     .LogInLog .Input::placeholder{
         color: rgb(188, 188, 188);
@@ -761,8 +755,7 @@ border: 2px solid  rgb(190, 188, 188);
         top:20px;
         height:50px;
         width:305px;
-        
-        
+        z-index: 10;
         text-decoration: none;
         
     }
@@ -772,6 +765,7 @@ border: 2px solid  rgb(190, 188, 188);
         height:50px;
         width:305px;
         margin-left:-110px;
+        z-index: 10;
     }
     .nextSignLog button{
        background-color: #000000;
