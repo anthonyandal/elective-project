@@ -1,29 +1,100 @@
 name: Web Syntax Check Pipeline
-
+ 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main" ]          
   push:
-    branches: [ "test-pipeline", "main" ]
-
+    branches:
+      - "**"                      
+    paths:
+      - "ESTI/pages/**.html"
+      - "ESTI/assets/js/**.js"
+      - "ESTI/index.html"
+ 
 jobs:
   syntax-check:
+    name: 🔍 HTML & JS Syntax Validator
     runs-on: ubuntu-latest
-
+ 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
+        with:
+          fetch-depth: 2
+ 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
+ 
       - name: Install Syntax Checkers (Linters)
         run: npm install -g jshint htmlhint
-
-      - name: Check JavaScript Syntax
-        run: jshint "ESTI/**/*.js"
-
+ 
+      - name: Get changed HTML files
+        id: html-files
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'ESTI/pages/*.html' 'ESTI/index.html' 2>/dev/null \
+                    || git ls-files 'ESTI/pages/*.html' 'ESTI/index.html')
+          echo "files=$CHANGED" >> $GITHUB_OUTPUT
+          echo "📄 HTML files to check:"
+          echo "$CHANGED"
+ 
       - name: Check HTML Syntax
-        run: htmlhint "ESTI/**/*.html" --ignore "**/index.html"
+        run: |
+          FAILED=0
+          FILES="${{ steps.html-files.outputs.files }}"
+ 
+          if [ -z "$FILES" ]; then
+            echo "No HTML files changed. Skipping."
+          else
+            for file in $FILES; do
+              if [ -f "$file" ]; then
+                echo ""
+                echo "Checking: $file"
+                htmlhint "$file" --config .htmlhintrc
+                if [ $? -ne 0 ]; then
+                  echo "❌ Failed: $file"
+                  FAILED=1
+                else
+                  echo "✅ Passed: $file"
+                fi
+              fi
+            done
+          fi
+ 
+          [ $FAILED -ne 0 ] && echo "❌ HTML check failed." && exit 1 || echo "✅ HTML check passed."
+ 
+      - name: Get changed JS files
+        id: js-files
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'ESTI/assets/js/*.js' 2>/dev/null \
+                    || git ls-files 'ESTI/assets/js/*.js')
+          echo "files=$CHANGED" >> $GITHUB_OUTPUT
+          echo "📄 JS files to check:"
+          echo "$CHANGED"
+ 
+      - name: Check JavaScript Syntax
+        run: |
+          FAILED=0
+          FILES="${{ steps.js-files.outputs.files }}"
+ 
+          if [ -z "$FILES" ]; then
+            echo "No JS files changed. Skipping."
+          else
+            for file in $FILES; do
+              if [ -f "$file" ]; then
+                echo ""
+                echo "Checking: $file"
+                jshint "$file" --config .jshintrc
+                if [ $? -ne 0 ]; then
+                  echo "❌ Failed: $file"
+                  FAILED=1
+                else
+                  echo "✅ Passed: $file"
+                fi
+              fi
+            done
+          fi
+ 
+          [ $FAILED -ne 0 ] && echo "❌ JS check failed." && exit 1 || echo "✅ JS check passed."
+ 
