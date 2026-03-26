@@ -67,7 +67,7 @@ jobs:
       - name: Check JavaScript Syntax
         run: |
           echo "🔍 Checking all JavaScript files..."
-          jshint "ESTI/assets/js/**/*.js" "ESTI/**/*.js" --exclude "**/node_modules/**"
+          find ESTI -name "*.js" -type f | xargs jshint
           
           if [ $? -ne 0 ]; then
             echo "❌ JS syntax check failed."
