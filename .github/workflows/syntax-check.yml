@@ -8,7 +8,7 @@ on:
       - "**"                      
     paths:
       - "ESTI/pages/**.html"
-      - "ESTI/assets/js/**.js"
+      - "ESTI/assets/js/.js"
       - "ESTI/index.html"
  
 jobs:
