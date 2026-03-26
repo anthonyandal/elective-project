@@ -3,6 +3,8 @@ name: Web Syntax Check Pipeline
 on:
   pull_request:
     branches: [ "main" ]
+  push:
+    branches: [ "test-pipeline", "main" ]
 
 jobs:
   syntax-check:
