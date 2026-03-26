@@ -1,9 +1,0 @@
-{
-  "esversion": 11,
-  "browser": true,
-  "devel": true,
-  "undef": false,
-  "unused": false,
-  "asi": false,
-  "eqeqeq": false
-}
