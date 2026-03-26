@@ -21,7 +21,7 @@ jobs:
         run: npm install -g jshint htmlhint
 
       - name: Check JavaScript Syntax
-        run: jshint ESTI/*.js
+        run: jshint "ESTI/**/*.js"
 
-      - name: Check HTML Syntax
-        run: htmlhint "ESTI/*.html" --ignore "**/index.html"
+      - name: Check HTML Syntaxl
+        run: htmlhint "ESTI/**/*.html" --ignore "**/index.html"
