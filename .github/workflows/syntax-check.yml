@@ -5,16 +5,8 @@
       branches: [ "main" ]          
     push:
       branches:
-        - "**"                      
-      paths:
-        - "ESTI/pages/**.html"
-        - "ESTI/assets/js/*.js"
-        - "ESTI/index.html"
-  
-  jobs:
-    syntax-check:
-      name:  HTML & JS Syntax Validator
-      runs-on: ubuntu-latest
+      - "test-pipeline"
+      - "main"
   
       steps:
         - name: Checkout Code
