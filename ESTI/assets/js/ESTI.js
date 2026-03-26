@@ -15,4 +15,4 @@ document.addEventListener('click', function(e) {
     if (!dropdown.contains(e.target) && !userIcon.contains(e.target)) {
         dropdown.style.display = 'none';
     }
-});
+})
