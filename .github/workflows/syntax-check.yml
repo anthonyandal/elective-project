@@ -13,7 +13,7 @@ on:
  
 jobs:
   syntax-check:
-    name: 🔍 HTML & JS Syntax Validator
+    name:  HTML & JS Syntax Validator
     runs-on: ubuntu-latest
  
     steps:
@@ -36,7 +36,7 @@ jobs:
           CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'ESTI/pages/*.html' 'ESTI/index.html' 2>/dev/null \
                     || git ls-files 'ESTI/pages/*.html' 'ESTI/index.html')
           echo "files=$CHANGED" >> $GITHUB_OUTPUT
-          echo "📄 HTML files to check:"
+          echo " HTML files to check:"
           echo "$CHANGED"
  
       - name: Check HTML Syntax
@@ -64,37 +64,15 @@ jobs:
  
           [ $FAILED -ne 0 ] && echo "❌ HTML check failed." && exit 1 || echo "✅ HTML check passed."
  
-      - name: Get changed JS files
-        id: js-files
-        run: |
-          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'ESTI/assets/js/*.js' 2>/dev/null \
-                    || git ls-files 'ESTI/assets/js/*.js')
-          echo "files=$CHANGED" >> $GITHUB_OUTPUT
-          echo "📄 JS files to check:"
-          echo "$CHANGED"
- 
       - name: Check JavaScript Syntax
         run: |
-          FAILED=0
-          FILES="${{ steps.js-files.outputs.files }}"
- 
-          if [ -z "$FILES" ]; then
-            echo "No JS files changed. Skipping."
+          echo "🔍 Checking all JavaScript files..."
+          jshint "ESTI/assets/js/**/*.js" "ESTI/**/*.js" --exclude "**/node_modules/**"
+          
+          if [ $? -ne 0 ]; then
+            echo "❌ JS syntax check failed."
+            exit 1
           else
-            for file in $FILES; do
-              if [ -f "$file" ]; then
-                echo ""
-                echo "Checking: $file"
-                jshint "$file" --config .jshintrc
-                if [ $? -ne 0 ]; then
-                  echo "❌ Failed: $file"
-                  FAILED=1
-                else
-                  echo "✅ Passed: $file"
-                fi
-              fi
-            done
+            echo "✅ All JS files passed syntax check."
           fi
- 
-          [ $FAILED -ne 0 ] && echo "❌ JS check failed." && exit 1 || echo "✅ JS check passed."
  
