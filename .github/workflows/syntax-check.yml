@@ -1,14 +1,17 @@
-  name: Web Syntax Check Pipeline
-  
-  on:
-    pull_request:
-      branches: [ "main" ]          
-    push:
-      branches:
-      - "test-pipeline"
-      - "main"
-  
-      steps:
+name: Web Syntax Check Pipeline
+
+on:
+  pull_request:
+    branches: [ "main" ]          
+  push:
+    branches:
+    - "test-pipeline"
+    - "main"
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
         - name: Checkout Code
           uses: actions/checkout@v4
           with:
@@ -27,7 +30,9 @@
           run: |
             CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'ESTI/pages/*.html' 'ESTI/index.html' 2>/dev/null \
                       || git ls-files 'ESTI/pages/*.html' 'ESTI/index.html')
-            echo "files=$CHANGED" >> $GITHUB_OUTPUT
+            echo "files<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGED" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
             echo " HTML files to check:"
             echo "$CHANGED"
   
@@ -65,8 +70,7 @@
                echo "No JS files found. Skipping."
                exit 0
             fi
-              echo "✅ All JS files passed syntax check."
-            fi
+            
             echo "$FILES" | xargs jshint
 
             if [ $? -ne 0 ]; then
