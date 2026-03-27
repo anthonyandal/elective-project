@@ -30,7 +30,9 @@ jobs:
           run: |
             CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'ESTI/pages/*.html' 'ESTI/index.html' 2>/dev/null \
                       || git ls-files 'ESTI/pages/*.html' 'ESTI/index.html')
-            echo "files=$CHANGED" >> $GITHUB_OUTPUT
+            echo "files<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGED" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
             echo " HTML files to check:"
             echo "$CHANGED"
   
